@@ -23,7 +23,19 @@ public class CalcTest {
     }
     @Test(expectedExceptions = Exception.class)
     public void testSum() {
-        System.out.println("testDiv");
+        System.out.println("testSum");
         int result = calculator.sum(1, 0);
+    }
+
+    @Test(expectedExceptions = Exception.class)
+    public void testMult() {
+        System.out.println("testMult");
+        int result = calculator.multiply(1, 0);
+    }
+
+    @Test(expectedExceptions = Exception.class)
+    public void testSub() {
+        System.out.println("testSub");
+        int result = calculator.sub(1, 0);
     }
 }

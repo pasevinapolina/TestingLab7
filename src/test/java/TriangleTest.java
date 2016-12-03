@@ -13,7 +13,7 @@ public class TriangleTest {
     public static Object[][] triangles() {
         return new Object[][] {
                 {3, 4, 5, 6, 12},
-                {6, 8, 10, 24, 48}
+                {6, 8, 10, 24, 24}
         };
     }
 
@@ -23,13 +23,14 @@ public class TriangleTest {
                 {3, 4, 0},
                 {6, 0, 10},
                 {-1, 4, 6},
-                {-3, 7, 0}
+                {3, -7, 1},
+                {7, 2, 4}
         };
     }
 
 
     @Test(dataProvider = "triangles")
-    public void testArea(int a, int b, int c, int correctArea, int correctPerimeter) throws Exception {
+    public void testArea(int a, int b, int c, double correctArea, int correctPerimeter) throws Exception {
         Triangle triangle = new Triangle(a, b, c);
         Assert.assertEquals(correctArea, triangle.getArea());
         Assert.assertEquals(correctPerimeter, triangle.getPerimeter());
@@ -39,6 +40,8 @@ public class TriangleTest {
     public void testConstructor(int a, int b, int c) throws Exception {
         Triangle triangle = new Triangle(a, b, c);
     }
+
+
 
 
 }

@@ -11,11 +11,10 @@ public class Triangle {
     private static final String  ISOSCELES  = "Isosceles triangle";
     private static final String  SCALENE  = "Scalene triangle";
 
-    public Triangle(int a, int b, int c)
+    public Triangle(int a, int b, int c) throws Exception
     {
         if(!isSidesValid(a, b, c)) {
-            System.err.println("Invalid arguments!");
-
+            throw new Exception("Invalid arguments!");
         }
 
         this.a = a;
